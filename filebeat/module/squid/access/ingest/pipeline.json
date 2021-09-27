@@ -5,7 +5,7 @@
       "field": "message",
       "patterns":[
         "%{NUMBER:squid.access.timestamp}%{SPACE}%{NUMBER:squid.access.response_time} %{IP:squid.access.src_ip} %{DATA:squid.access.squid_request_status}/%{NUMBER:squid.access.http_status_code} %{NUMBER:squid.access.reply_size_include_header} %{DATA:squid.access.http_method} %{DATA:squid.access.http_protocol}://%{IPORHOST:squid.access.dst_host}%{NOTSPACE:squid.access.request_url} %{NOTSPACE:squid.access.user} %{DATA:squid.access.hierarchy_code}/(?:-|%{IP:squid.access.dst_ip}) %{NOTSPACE:squid.access.content_type}",
-        "%{NUMBER:squid.access.timestamp}%{SPACE}%{NUMBER:squid.access.response_time} %{IP:squid.access.src_ip} %{DATA:squid.access.squid_request_status}/%{NUMBER:squid.access.http_status_code} %{NUMBER:squid.access.reply_size_include_header} %{DATA:squid.access.http_method} %{IPORHOST:squid.access.request_url}:%{NUMBER:squid.access.request_url_port} %{NOTSPACE:squid.access.user} %{DATA:squid.access.hierarchy_code}/(?:-|%{IP:squid.access.dst_ip})"
+        "%{NUMBER:squid.access.timestamp}%{SPACE}%{NUMBER:squid.access.response_time} %{IP:squid.access.src_ip} %{DATA:squid.access.squid_request_status}/%{NUMBER:squid.access.http_status_code} %{NUMBER:squid.access.reply_size_include_header} %{DATA:squid.access.http_method} %{IPORHOST:squid.access.dst_host}:%{NUMBER:squid.access.request_url_port} %{NOTSPACE:squid.access.user} %{DATA:squid.access.hierarchy_code}/(?:-|%{IP:squid.access.dst_ip})"
         ],
       "ignore_missing": true
     }
