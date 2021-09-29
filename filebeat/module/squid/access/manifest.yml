@@ -8,12 +8,14 @@ var:
       - /var/log/squid/access.log*
     os.windows:
       - c:/squid/var/log/access.log*
+  - name: input
+    default: udp
 
 ingest_pipeline: ingest/pipeline.json
 input: config/access.yml
 
 require.processors:
 - name: user_agent
-  plugin: ingest-user-agent
+  plugin: ingest-user_agent
 - name: geoip
   plugin: ingest-geoip
